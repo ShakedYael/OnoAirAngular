@@ -9,6 +9,7 @@ import { HelpComponent } from './features/help/help.component';
 import { SingleFlightComponent } from './features/single-flight/single-flight.component';
 import { SingleDestinationComponent } from './features/single-destination/single-destination.component';
 import { ViewBookingComponent } from './features/view-booking/view-booking.component';
+import { FlightCardComponent } from './features/flight-card/flight-card.component';
 
 export const routes: Routes = [
   { path: 'home-page', component: HomePageComponent },
@@ -21,7 +22,8 @@ export const routes: Routes = [
   {path: 'help', component: HomePageComponent},
   {path:'single-flight', component: HomePageComponent},
   {path:'single-destination', component: HomePageComponent},
-  {path:'view-booking', component: HomePageComponent}
+  {path:'view-booking', component: HomePageComponent},
+  {path:'flight-card', component: HomePageComponent}
 
 
   
