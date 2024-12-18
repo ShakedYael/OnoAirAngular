@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FlightCardComponent } from './features/flight-card.component';
+import { FlightCardComponent } from './flight-card.component';
 
 describe('FlightCardComponent', () => {
   let component: FlightCardComponent;
