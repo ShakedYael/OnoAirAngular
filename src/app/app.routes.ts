@@ -14,16 +14,16 @@ import { FlightCardComponent } from './features/flights/pages/flight-card/flight
 export const routes: Routes = [
   { path: 'home-page', component: HomePageComponent },
   { path: '', component: HomePageComponent },
-  {path: 'mange-flights', component: HomePageComponent},
-  {path: 'manage-destinations', component: HomePageComponent},
-  {path: 'book-flight', component: HomePageComponent},
-  {path: 'book-single-flight', component: HomePageComponent},
-  {path: 'my-bookings', component: HomePageComponent},
-  {path: 'help', component: HomePageComponent},
-  {path:'single-flight', component: HomePageComponent},
-  {path:'single-destination', component: HomePageComponent},
-  {path:'view-booking', component: HomePageComponent},
-  {path:'flight-card', component: HomePageComponent}
+  {path: 'manage-flights', component: ManageFlightsComponent},
+  {path: 'manage-destinations', component: ManageDestinationsComponent},
+  {path: 'book-flight', component: BookFlightComponent},
+  {path: 'book-single-flight', component: BookSingleFlightComponent},
+  {path: 'my-bookings', component: MyBookingsComponent},
+  {path: 'help', component: HelpComponent},
+  {path:'single-flight', component: SingleFlightComponent},
+  {path:'single-destination', component: SingleDestinationComponent},
+  {path:'view-booking', component: ViewBookingComponent},
+  {path:'flight-card', component: FlightCardComponent}
 
 
   

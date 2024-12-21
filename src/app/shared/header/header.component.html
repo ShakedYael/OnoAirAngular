@@ -1,1 +1,26 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+    <button mat-mini-fab class="hamburger" aria-label="Menu" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="app-title" (click)="goToHome()">OnoAir</span>
+    <span class="spacer"></span>
+  </mat-toolbar>
+  
+  <!-- Main Menu -->
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="adminMenu">Admin</button>
+    <button mat-menu-item [matMenuTriggerFor]="userMenu">User</button>
+  </mat-menu>
+  
+  <!-- Admin Submenu -->
+  <mat-menu #adminMenu="matMenu">
+    <button mat-menu-item (click)="navigateTo('manage-flights')">Manage Flights</button>
+    <button mat-menu-item (click)="navigateTo('manage-destinations')">Manage Destinations</button>
+  </mat-menu>
+  
+  <!-- User Submenu -->
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="navigateTo('search-a-flight')">Search a Flight</button>
+    <button mat-menu-item (click)="navigateTo('my-bookings')">My Bookings</button>
+  </mat-menu>
+  
