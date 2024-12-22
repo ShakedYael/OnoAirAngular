@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    justify-content: flex-end; /* Aligns content to the right */
+    align-items: center;       /* Vertically centers content */
+    height: 50px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6; /* Optional top border for separation */
+    position: fixed;           /* Sticks footer to the bottom */
+    bottom: 0;                 /* Aligns to the bottom of the screen */
+    width: 100%;               /* Ensures the footer spans the full screen width */
+    padding-right: 8px;        /* Reduce this value to move closer to the center */
+  }
+  
+  .footer-content {
+    margin-right: 0;           /* Ensure no extra margin pushes it further right */
+  }
+  
+  .help-icon {
+    background-color: transparent;
+    color: #6c757d;            /* Icon color */
+  }
+  
+  .help-icon:hover {
+    color: #495057;            /* Darker hover color for feedback */
+  }
+  
