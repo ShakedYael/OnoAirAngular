@@ -10,6 +10,7 @@ import { SingleFlightComponent } from './features/flights/pages/single-flight/si
 import { SingleDestinationComponent } from './features/destinations/pages/single-destination/single-destination.component';
 import { ViewBookingComponent } from './features/bookings/pages/view-booking/view-booking.component';
 import { FlightCardComponent } from './features/flights/pages/flight-card/flight-card.component';
+import { SearchFlightComponent } from './features/flights/pages/search-a-flight/search-a-flight.component';
 
 export const routes: Routes = [
   { path: 'home-page', component: HomePageComponent },
@@ -23,7 +24,8 @@ export const routes: Routes = [
   {path:'single-flight', component: SingleFlightComponent},
   {path:'single-destination', component: SingleDestinationComponent},
   {path:'view-booking', component: ViewBookingComponent},
-  {path:'flight-card', component: FlightCardComponent}
+  {path:'flight-card', component: FlightCardComponent},
+  {path: 'search-a-flight', component: SearchFlightComponent},
 
 
   
