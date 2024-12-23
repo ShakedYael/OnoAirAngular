@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { FlightCardComponent } from '../flight-card/flight-card.component';
-
 
 @Component({
   selector: 'app-search-a-flight',
-  imports: [FlightCardComponent],
+  imports: [],
   templateUrl: './search-a-flight.component.html',
   styleUrl: './search-a-flight.component.css'
 })
-export class SearchFlightComponent {
+export class SearchAFlightComponent {
 
 }
