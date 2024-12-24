@@ -1,14 +1,15 @@
-<div class="flight-card-container">
-    <h1>Flight Cards</h1>
-    <div class="flight-cards">
-      <div *ngFor="let card of flightCards" class="flight-card">
-        <div class="flight-info">
-          <h3>{{ card.destination }}</h3>
-          <p>Flight No: {{ card.flightNo }}</p>
-          <p>Origin: {{ card.origin }}</p>
-          <p>Departure: {{ card.departureDate }} {{ card.departureTime }}</p>
-          <p>Arrival: {{ card.arrivalDate }} {{ card.arrivalTime }}</p>
-          <p>Seats: {{ card.seats }}</p>
-        </div>
-      </div>
+<h5>Last Minute Flights</h5>
+<div class="flight-card-container" *ngIf="filteredFlights.length > 0; else noFlights">
+  <div *ngFor="let flight of filteredFlights" class="flight-card" (click)="bookFlight(flight.flightNo)">
+    <img [src]="flight.destinationImage" alt="Destination Image" class="destination-image" />
+    <div class="flight-details">
+      <h3>{{ flight.destination }} </h3>
+      <h3>Departure: {{ flight.departureDate }} </h3>
+
     </div>
+  </div>
+</div>
+
+<ng-template #noFlights>
+  <p class="no-flights-message">>No flights available for the coming week.</p>
+</ng-template>

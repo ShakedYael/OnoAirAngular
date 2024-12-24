@@ -5,16 +5,16 @@ import { Flight } from '../model/flight.model';
 })
 export class FlightService {
   private flights: Flight[] = [
-    new Flight('W61283', 'Tel Aviv', 'Krakow', '2024-01-15', '08:00', '2024-01-15', '12:00', 180),
-    new Flight('LX8396', 'Larnaca', 'Zurich', '2024-01-16', '09:30', '2024-01-16', '14:30', 150),
-    new Flight('DL419', 'New York', 'London', '2024-01-17', '18:00', '2024-01-18', '06:00', 250),
-    new Flight('EK202', 'Dubai', 'Paris', '2024-01-18', '22:00', '2024-01-19', '04:00', 300),
-    new Flight('LH456', 'Frankfurt', 'Los Angeles', '2024-01-19', '11:00', '2024-01-19', '20:00', 350),
-    new Flight('AF007', 'Paris', 'New York', '2024-01-20', '10:00', '2024-01-20', '13:00', 220),
-    new Flight('BA001', 'London', 'New York', '2024-01-21', '14:00', '2024-01-21', '17:00', 200),
-    new Flight('QR888', 'Doha', 'Tokyo', '2024-01-22', '07:00', '2024-01-22', '16:00', 180),
-    new Flight('AA101', 'Dallas', 'Miami', '2024-01-23', '12:00', '2024-01-23', '14:00', 120),
-    new Flight('CA123', 'Beijing', 'Shanghai', '2024-01-24', '15:00', '2024-01-24', '16:30', 100)
+    new Flight('W61283', 'Tel Aviv', 'London', '2024-12-24', '22:00', '2024-12-24', '23:00', 180),
+    new Flight('LX8396', 'Larnaca', 'Frankfurt', '2024-12-25', '09:30', '2024-12-25', '14:30', 150),
+    new Flight('DL419', 'New York', 'Paris', '2024-12-26', '18:00', '2024-12-27', '06:00', 250),
+    new Flight('EK202', 'Dubai', 'Tokyo', '2024-12-27', '22:00', '2024-12-28', '04:00', 300),
+    new Flight('LH456', 'Frankfurt', 'Sydney', '2024-12-28', '11:00', '2024-12-29', '20:00', 350),
+    new Flight('AF007', 'Paris', 'New York', '2025-01-01', '10:00', '2025-01-01', '13:00', 220),
+    new Flight('BA001', 'London', 'Dubai', '2025-01-03', '14:00', '2025-01-03', '20:00', 200),
+    new Flight('QR888', 'Doha', 'Tokyo', '2025-01-05', '07:00', '2025-01-05', '16:00', 180),
+    new Flight('AA101', 'Dallas', 'Miami', '2025-01-06', '12:00', '2025-01-06', '14:00', 120),
+    new Flight('CA123', 'Beijing', 'Shanghai', '2025-01-07', '15:00', '2025-01-07', '16:30', 100)
   ];
 
 
