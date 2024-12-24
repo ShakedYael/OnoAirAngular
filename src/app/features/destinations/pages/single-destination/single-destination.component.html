@@ -1,1 +1,14 @@
-<p>single-destination works!</p>
+<div class="single-destination-container" *ngIf="destination">
+    <h1>{{ destination.name }}</h1>
+    <p><strong>Destination Code:</strong> {{ destination.code }}</p>
+    <img [src]="destination.imageUrl" alt="{{ destination.name }}" class="destination-image" />
+    <p><strong>Airport Name:</strong> {{ destination.airportName }}</p>
+    <p>
+      <strong>Airport Website:</strong>
+      <a [href]="destination.airportUrl" target="_blank">{{ destination.airportUrl }}</a>
+    </p>
+    <button mat-raised-button color="primary" routerLink="/manage-destinations">
+      Back to Destinations
+    </button>
+  </div>
+  
