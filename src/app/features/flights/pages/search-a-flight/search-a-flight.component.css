@@ -1,0 +1,46 @@
+.search-flight-container {
+    padding: 20px;
+    max-width: 1000px; /* Increased width for more columns */
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .flight-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .flight-table th,
+  .flight-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .flight-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .flight-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
