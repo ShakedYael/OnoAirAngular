@@ -22,7 +22,7 @@ export const routes: Routes = [
   {path: 'book-single-flight', component: BookSingleFlightComponent},
   {path: 'my-bookings', component: MyBookingsComponent},
   {path: 'help', component: HelpComponent},
-  {path:'single-flight', component: SingleFlightComponent},
+  {path:'single-flight/:flightNo', component: SingleFlightComponent},
   {path:'single-destination/:code', component: SingleDestinationComponent},
   {path:'view-booking', component: ViewBookingComponent},
   {path:'flight-card', component: FlightCardComponent},

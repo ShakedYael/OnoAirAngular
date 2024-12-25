@@ -4,11 +4,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FlightService } from '../../service/flights.service';
 import { Flight } from '../../model/flight.model';
+import { RouterModule } from '@angular/router'; // Import RouterModule
 
 
 @Component({
   selector: 'app-manage-flights',
-  imports: [MatTableModule,MatIconModule, MatButtonModule],
+  imports: [MatTableModule,MatIconModule, MatButtonModule, RouterModule],
   templateUrl: './manage-flights.component.html',
   styleUrl: './manage-flights.component.css'
 })

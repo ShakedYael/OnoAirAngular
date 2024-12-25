@@ -1,1 +1,12 @@
-<p>single-flight works!</p>
+<div class="single-flight-container" *ngIf="flight">
+    <h1>Flight Details</h1>
+    <p><strong>Flight Number:</strong> {{ flight.flightNo }}</p>
+    <p><strong>Origin:</strong> {{ flight.origin }}</p>
+    <p><strong>Destination:</strong> {{ flight.destination }}</p>
+    <p><strong>Departure Date:</strong> {{ flight.departureDate }}</p>
+    <p><strong>Departure Time:</strong> {{ flight.departureTime }}</p>
+    <p><strong>Arrival Date:</strong> {{ flight.arrivalDate }}</p>
+    <p><strong>Arrival Time:</strong> {{ flight.arrivalTime }}</p>
+    <p><strong>Seats Available:</strong> {{ flight.seats }}</p>
+  </div>
+  
