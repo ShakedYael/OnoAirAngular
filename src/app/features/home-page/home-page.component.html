@@ -1,10 +1,18 @@
 <div class="homepage-container">
-    <div class="last-minute-flights-section">
-      <app-flight-card></app-flight-card>
-    </div>
-  
-    <div class="find-a-flight-section">
+  <section class="last-minute-section">
+      <div class="section-header">
+          <h2>Last Minute Flights</h2>
+          <p class="subtitle">Special offers for flights departing this week</p>
+      </div>
+      <div class="flight-cards">
+          <app-flight-card></app-flight-card>
+      </div>
+  </section>
+
+  <section class="book-flight-section">
+      <div class="section-header">
+      <!-- <h2>Book a Flight</h2> -->   
+      </div>
       <app-search-a-flight></app-search-a-flight>
-    </div>
-  </div>
-  
+  </section>
+</div>

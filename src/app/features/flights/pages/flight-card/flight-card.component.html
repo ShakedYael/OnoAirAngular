@@ -1,4 +1,3 @@
-<h5>Last Minute Flights</h5>
 <div class="flight-card-container" *ngIf="filteredFlights.length > 0; else noFlights">
   <div *ngFor="let flight of filteredFlights" class="flight-card" (click)="bookFlight(flight.flightNo)">
     <img [src]="flight.destinationImage" alt="Destination Image" class="destination-image" />
