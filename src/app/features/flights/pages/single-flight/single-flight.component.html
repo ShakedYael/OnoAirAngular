@@ -1,12 +1,19 @@
-<div class="single-flight-container" *ngIf="flight">
+<div *ngIf="!flightNotFound; else notFoundTemplate" class="single-flight-container">
     <h1>Flight Details</h1>
-    <p><strong>Flight Number:</strong> {{ flight.flightNo }}</p>
-    <p><strong>Origin:</strong> {{ flight.origin }}</p>
-    <p><strong>Destination:</strong> {{ flight.destination }}</p>
-    <p><strong>Departure Date:</strong> {{ flight.departureDate }}</p>
-    <p><strong>Departure Time:</strong> {{ flight.departureTime }}</p>
-    <p><strong>Arrival Date:</strong> {{ flight.arrivalDate }}</p>
-    <p><strong>Arrival Time:</strong> {{ flight.arrivalTime }}</p>
-    <p><strong>Seats Available:</strong> {{ flight.seats }}</p>
+    <p><strong>Flight Number:</strong> {{ flight?.flightNo }}</p>
+    <p><strong>Origin:</strong> {{ flight?.origin }}</p>
+    <p><strong>Destination:</strong> {{ flight?.destination }}</p>
+    <p><strong>Departure Date:</strong> {{ flight?.departureDate }}</p>
+    <p><strong>Departure Time:</strong> {{ flight?.departureTime }}</p>
+    <p><strong>Arrival Date:</strong> {{ flight?.arrivalDate }}</p>
+    <p><strong>Arrival Time:</strong> {{ flight?.arrivalTime }}</p>
+    <p><strong>Seats Available:</strong> {{ flight?.seats }}</p>
   </div>
+  
+  <ng-template #notFoundTemplate>
+    <div class="flight-not-found">
+      <h1>Flight Not Found</h1>
+      <p>We couldn't find the flight you were looking for.</p>
+    </div>
+  </ng-template>
   

@@ -1,11 +1,17 @@
-<div class="single-destination-container" *ngIf="destination">
-    <h1>{{ destination.name }}</h1>
-    <img [src]="destination.imageUrl" alt="{{ destination.name }}" class="destination-image" />
-    <p><strong>Destination Code:</strong> {{ destination.code }}</p>
-    <p><strong>Airport Name:</strong> {{ destination.airportName }}</p>
-    <p>
-      <strong>Airport Website:</strong>
-      <a [href]="destination.airportUrl" target="_blank">{{ destination.airportUrl }}</a>
-    </p>
+<div *ngIf="!destinationNotFound; else notFoundTemplate" class="single-destination-container">
+  <h1>{{ destination?.name }}</h1>
+  <img [src]="destination?.imageUrl" alt="{{ destination?.name }}" class="destination-image" />
+  <p><strong>Destination Code:</strong> {{ destination?.code }}</p>
+  <p><strong>Airport Name:</strong> {{ destination?.airportName }}</p>
+  <p>
+    <strong>Airport Website:</strong>
+    <a [href]="destination?.airportUrl" target="_blank">{{ destination?.airportUrl }}</a>
+  </p>
+</div>
+
+<ng-template #notFoundTemplate>
+  <div class="destination-not-found">
+    <h1>Destination Not Found</h1>
+    <p>We couldn't find the destination you were looking for.</p>
   </div>
-  
+</ng-template>
