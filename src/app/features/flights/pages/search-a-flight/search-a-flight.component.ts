@@ -4,16 +4,30 @@ import { Router } from '@angular/router';
 import { FlightService } from '../../service/flights.service';
 import { Flight } from '../../model/flight.model';
 import { CommonModule } from '@angular/common';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @Component({
   selector: 'app-search-a-flight',
-  imports: [FlightCardComponent, CommonModule],
+  imports: [CommonModule,MatTableModule,MatButtonModule,MatPaginatorModule,MatSortModule],
   templateUrl: './search-a-flight.component.html',
   styleUrl: './search-a-flight.component.css'
 })
 export class SearchAFlightComponent  implements OnInit {
   flights: Flight[] = [];
+  displayedColumns: string[] = [
+    'flightNo',
+    'origin',
+    'destination',
+    'departureDate',
+    'arrivalDate',
+    'actions'
+  ];
+
+
 
   constructor(
     private flightService: FlightService,
