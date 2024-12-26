@@ -1,34 +1,55 @@
 .help-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
-  
-  h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #007bff;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-top: 20px;
-    color: #0056b3;
-  }
-  
-  p {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin-bottom: 3rem; /* Added spacing before footer */
+}
+
+.section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+}
+
+.help-header {
+  color: #007bff;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.topic {
+  color: #0056b3;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.25rem;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.contact-banner {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  margin-top: 2rem;
+  margin-bottom: 2rem; /* Added spacing after contact banner */
+}
+
+.contact-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
