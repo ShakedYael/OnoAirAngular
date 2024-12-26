@@ -1,0 +1,55 @@
+.my-bookings-container {
+    max-width: 900px;
+    margin:0 auto;
+    padding: 40px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #1e3a8a; /* Primary color for section titles */
+  }
+  
+  .bookings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between booking cards */
+  }
+  
+  .booking-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin: 15px;
+  }
+  
+  .booking-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .no-bookings-message {
+    text-align: center;
+    color: #6c757d; /* Muted color for no-bookings message */
+    font-style: italic;
+  }
+  
+  .destination-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
