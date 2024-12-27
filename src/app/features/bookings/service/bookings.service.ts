@@ -1,57 +1,55 @@
 import { Injectable } from '@angular/core';
+import { FlightService } from '../../flights/service/flights.service';
 import { Booking } from '../model/booking.model';
+import { Flight } from '../../flights/model/flight.model';
+import { DestinationService } from '../../destinations/service/destinations.service';
+
 
 @Injectable({
-  providedIn: 'root',
-})
-export class BookingService {
-  private bookings: Booking[] = [
-    new Booking(
-        '1',
-        'Tel Aviv',
-        'London',
-        '2024-12-24',
-        '20:00',
-        '2024-12-24',
-        '23:00',
-        2,
-        'https://cms.inspirato.com/ImageGen.ashx?image=%2Fmedia%2F5682444%2FLondon_Dest_16531610X.jpg&width=1081.5', 
-        'future'
-      ),
-      new Booking(
-        '3',
-        'New York',
-        'Paris',
-        '2024-12-26',
-        '18:00',
-        '2024-12-27',
-        '08:00',
-        4,
-        'https://149990825.v2.pressablecdn.com/wp-content/uploads/2023/09/Paris1.jpg',
-        'past'
-      ),
-      new Booking(
-        '4',
-        'Dubai',
-        'Tokyo',
-        '2024-12-27',
-        '22:00',
-        '2024-12-28',
-        '07:00',
-        1,
-        'https://images.goway.com/production/featured_images/japan_tokyo_akihabara_AdobeStock_295310062_Editorial_Use_Only.jpg',
-        'future'
-      ),
-    // Add more bookings as needed...
-  ];
-
-  // Fetch list of past bookings
-  listPastBookings(): Booking[] {
-    return this.bookings.filter((booking) => booking.status === 'past');
+    providedIn: 'root',
+  })
+  export class BookingsService {
+    private bookings: Booking[] = [];
+  
+    constructor(
+      private flightService: FlightService,
+      private destinationService: DestinationService
+    ) {
+      this.initializeBookings();
+    }
+  
+    private initializeBookings(): void {
+      const flights = this.flightService.list();
+  
+      this.bookings = [
+        {
+          id: '1',
+          passengers: 5,
+          flight: flights[0],
+          destinationImageUrl: this.getDestinationImageUrl(flights[0].destination),
+        },
+        {
+          id: '2',
+          passengers: 6,
+          flight: flights[1],
+          destinationImageUrl: this.getDestinationImageUrl(flights[1].destination),
+        },
+        // Add more bookings here
+      ];
+    }
+  
+    private getDestinationImageUrl(destination: string): string | undefined {
+      const destinationDetails = this.destinationService
+        .list()
+        .find((d) => d.code === destination);
+      return destinationDetails ? destinationDetails.imageUrl : undefined;
+    }
+  
+    list(): Booking[] {
+      return this.bookings;
+    }
+  
+    get(id: string): Booking | undefined {
+      return this.bookings.find((booking) => booking.id === id);
+    }
   }
-
-  // Fetch list of future bookings
-  listFutureBookings(): Booking[] {
-    return this.bookings.filter((booking) => booking.status === 'future');
-  }
-}

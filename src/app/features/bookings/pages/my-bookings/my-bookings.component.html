@@ -1,42 +1,41 @@
 <div class="my-bookings-container">
-    <h1>My Bookings</h1>
-  
-    <!-- Upcoming Bookings -->
-    <h2>Upcoming Bookings</h2>
-    <div *ngIf="futureBookings.length; else noFutureBookings" class="bookings-section">
-      <div *ngFor="let booking of futureBookings" class="booking-card">
-        <img [src]="booking.destinationImage" alt="{{ booking.destination }}" class="destination-image" />
-        <div class="booking-details">
-          <p><strong>Origin:</strong> {{ booking.origin }}</p>
-          <p><strong>Boarding:</strong> {{ booking.boardingDate }} {{ booking.boardingTime }}</p>
-          <p><strong>Destination:</strong> {{ booking.destination }}</p>
-          <p><strong>Landing:</strong> {{ booking.landingDate }} {{ booking.landingTime }}</p>
-          <p><strong>No. of Passengers:</strong> {{ booking.passengers }}</p>
-        </div>
-        <button mat-raised-button color="primary" [routerLink]="['/view-booking', booking.id]">View</button>
+  <h1>My Bookings</h1>
+
+  <!-- Upcoming Bookings -->
+  <h2>Upcoming Bookings</h2>
+  <div *ngIf="futureBookings.length; else noFutureBookings" class="bookings-section">
+    <div *ngFor="let booking of futureBookings" class="booking-card">
+      <img [src]="booking.destinationImageUrl" alt="{{ booking.flight.destination }}" class="destination-image" />
+      <div class="booking-details">
+        <p><strong>Origin:</strong> {{ booking.flight.origin }}</p>
+        <p><strong>Boarding:</strong> {{ booking.flight.departureDate }} {{ booking.flight.departureTime }}</p>
+        <p><strong>Destination:</strong> {{ booking.flight.destination }}</p>
+        <p><strong>Landing:</strong> {{ booking.flight.arrivalDate }} {{ booking.flight.arrivalTime }}</p>
+        <p><strong>No. of Passengers:</strong> {{ booking.passengers }}</p>
       </div>
+      <button mat-raised-button color="primary" [routerLink]="['/view-booking', booking.id]">View</button>
     </div>
-    <ng-template #noFutureBookings>
-      <p class="no-bookings-message">No upcoming bookings found.</p>
-    </ng-template>
-  
-    <!-- Previous Bookings -->
-    <h2>Previous Bookings</h2>
-    <div *ngIf="pastBookings.length; else noPastBookings" class="bookings-section">
-      <div *ngFor="let booking of pastBookings" class="booking-card">
-        <img [src]="booking.destinationImage" alt="{{ booking.destination }}" class="destination-image" />
-        <div class="booking-details">
-          <p><strong>Origin:</strong> {{ booking.origin }}</p>
-          <p><strong>Boarding:</strong> {{ booking.boardingDate }} {{ booking.boardingTime }}</p>
-          <p><strong>Destination:</strong> {{ booking.destination }}</p>
-          <p><strong>Landing:</strong> {{ booking.landingDate }} {{ booking.landingTime }}</p>
-          <p><strong>No. of Passengers:</strong> {{ booking.passengers }}</p>
-        </div>
-        <button mat-raised-button color="primary" [routerLink]="['/view-booking', booking.id]">View</button>
-      </div>
-    </div>
-    <ng-template #noPastBookings>
-      <p class="no-bookings-message">No past bookings found.</p>
-    </ng-template>
   </div>
-  
+  <ng-template #noFutureBookings>
+    <p class="no-bookings-message">No upcoming bookings found.</p>
+  </ng-template>
+
+  <!-- Previous Bookings -->
+  <h2>Previous Bookings</h2>
+  <div *ngIf="pastBookings.length; else noPastBookings" class="bookings-section">
+    <div *ngFor="let booking of pastBookings" class="booking-card">
+      <img [src]="booking.destinationImageUrl" alt="{{ booking.flight.destination }}" class="destination-image" />
+      <div class="booking-details">
+        <p><strong>Origin:</strong> {{ booking.flight.origin }}</p>
+        <p><strong>Boarding:</strong> {{ booking.flight.departureDate }} {{ booking.flight.departureTime }}</p>
+        <p><strong>Destination:</strong> {{ booking.flight.destination }}</p>
+        <p><strong>Landing:</strong> {{ booking.flight.arrivalDate }} {{ booking.flight.arrivalTime }}</p>
+        <p><strong>No. of Passengers:</strong> {{ booking.passengers }}</p>
+      </div>
+      <button mat-raised-button color="primary" [routerLink]="['/view-booking', booking.id]">View</button>
+    </div>
+  </div>
+  <ng-template #noPastBookings>
+    <p class="no-bookings-message">No past bookings found.</p>
+  </ng-template>
+</div>
