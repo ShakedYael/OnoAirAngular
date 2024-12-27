@@ -1,1 +1,28 @@
-<p>view-booking works!</p>
+<div class="view-booking-container" *ngIf="booking">
+    <h1>Book a flight</h1>
+    <div class="flight-details">
+      <p>
+        <strong>Origin:</strong> {{ booking.flight.origin }} <br />
+        <strong>Boarding:</strong> {{ booking.flight.departureDate }} {{ booking.flight.departureTime }}
+      </p>
+      <p>
+        <strong>Destination:</strong> {{ booking.flight.destination }} <br />
+        <strong>Landing:</strong> {{ booking.flight.arrivalDate }} {{ booking.flight.arrivalTime }}
+      </p>
+    </div>
+  
+    <p><strong>No. of passengers:</strong> {{ booking.passengers }}</p>
+  
+    <div *ngFor="let passenger of [].constructor(booking.passengers); let i = index">
+      <h3>Passenger {{ i + 1 }}</h3>
+      <p>
+        <strong>Name:</strong> testi test <br />
+        <strong>Passport no.:</strong> 123456789
+      </p>
+    </div>
+  </div>
+  
+  <div *ngIf="!booking" class="error-message">
+    <p>Booking not found.</p>
+  </div>
+  
