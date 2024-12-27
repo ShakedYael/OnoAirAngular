@@ -41,8 +41,8 @@ import { DestinationService } from '../../destinations/service/destinations.serv
     private getDestinationImageUrl(destination: string): string | undefined {
       const destinationDetails = this.destinationService
         .list()
-        .find((d) => d.code === destination);
-      return destinationDetails ? destinationDetails.imageUrl : undefined;
+        .find((d) => d.name === destination);
+      return destinationDetails ? destinationDetails.imageUrl : 'https://via.placeholder.com/150';
     }
   
     list(): Booking[] {
