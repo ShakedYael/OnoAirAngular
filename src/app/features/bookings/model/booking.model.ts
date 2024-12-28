@@ -1,8 +1,21 @@
 import { Flight } from '../../flights/model/flight.model';
-export interface Booking {
-  id: string;
-  passengers: number;
-  flight: Flight; // Contains destination and other flight details
-  destinationImageUrl?: string // Optional field for destination image URL
+import { Passenger } from './passenger.model';
+
+
+
+export class Booking {
+  constructor(
+    public id: string,
+    public passengers: Passenger[], 
+    public flight: Flight, 
+    public destinationImageUrl?: string 
+
+
+  ) {}
+  
+  getPassengerCount(): number {
+    return this.passengers.length;
+  }
+
 
 }

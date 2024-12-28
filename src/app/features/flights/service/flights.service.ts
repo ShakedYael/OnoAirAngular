@@ -14,7 +14,7 @@ export class FlightService {
     new Flight('BA001', 'London', 'Dubai', '2025-01-03', '14:00', '2025-01-03', '20:00', 200),
     new Flight('QR888', 'Doha', 'Tokyo', '2025-01-05', '07:00', '2025-01-05', '16:00', 180),
     new Flight('AA101', 'Dallas', 'Miami', '2025-01-06', '12:00', '2025-01-06', '14:00', 120),
-    new Flight('CA123', 'Beijing', 'Shanghai', '2025-01-07', '15:00', '2025-01-07', '16:30', 100)
+    new Flight('CA123', 'Beijing', 'Sydney', '2025-01-07', '15:00', '2025-01-07', '16:30', 100)
   ];
 
 

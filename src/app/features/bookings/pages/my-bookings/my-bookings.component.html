@@ -5,13 +5,17 @@
   <h2>Upcoming Bookings</h2>
   <div *ngIf="futureBookings.length; else noFutureBookings" class="bookings-section">
     <div *ngFor="let booking of futureBookings" class="booking-card">
-      <img [src]="booking.destinationImageUrl" alt="{{ booking.flight.destination }}" class="destination-image" />
+      <img
+        [src]="booking.destinationImageUrl"
+        alt="{{ booking.flight.destination }}"
+        class="destination-image"
+      />
       <div class="booking-details">
         <p><strong>Origin:</strong> {{ booking.flight.origin }}</p>
         <p><strong>Boarding:</strong> {{ booking.flight.departureDate }} {{ booking.flight.departureTime }}</p>
         <p><strong>Destination:</strong> {{ booking.flight.destination }}</p>
         <p><strong>Landing:</strong> {{ booking.flight.arrivalDate }} {{ booking.flight.arrivalTime }}</p>
-        <p><strong>No. of Passengers:</strong> {{ booking.passengers }}</p>
+        <p><strong>No. of Passengers:</strong> {{ booking.getPassengerCount() }}</p>
       </div>
       <button mat-raised-button color="primary" [routerLink]="['/view-booking', booking.id]">View</button>
     </div>
@@ -24,13 +28,18 @@
   <h2>Previous Bookings</h2>
   <div *ngIf="pastBookings.length; else noPastBookings" class="bookings-section">
     <div *ngFor="let booking of pastBookings" class="booking-card">
-      <img [src]="booking.destinationImageUrl" alt="{{ booking.flight.destination }}" class="destination-image" />
+      <img
+        [src]="booking.destinationImageUrl"
+        alt="{{ booking.flight.destination }}"
+        class="destination-image"
+      />
       <div class="booking-details">
         <p><strong>Origin:</strong> {{ booking.flight.origin }}</p>
-        <p><strong>Boarding:</strong> {{ booking.flight.departureDate }} {{ booking.flight.departureTime }}</p>
         <p><strong>Destination:</strong> {{ booking.flight.destination }}</p>
+        <p>test</p>
+        <p><strong>Boarding:</strong> {{ booking.flight.departureDate }} {{ booking.flight.departureTime }}</p>
         <p><strong>Landing:</strong> {{ booking.flight.arrivalDate }} {{ booking.flight.arrivalTime }}</p>
-        <p><strong>No. of Passengers:</strong> {{ booking.passengers }}</p>
+        <p><strong>No. of Passengers:</strong> {{ booking.getPassengerCount() }}</p>
       </div>
       <button mat-raised-button color="primary" [routerLink]="['/view-booking', booking.id]">View</button>
     </div>

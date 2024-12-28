@@ -3,11 +3,14 @@ import { FlightService } from '../../flights/service/flights.service';
 import { Booking } from '../model/booking.model';
 import { Flight } from '../../flights/model/flight.model';
 import { DestinationService } from '../../destinations/service/destinations.service';
+import { Passenger } from '../model/passenger.model';
 
 
 @Injectable({
     providedIn: 'root',
   })
+
+
   export class BookingsService {
     private bookings: Booking[] = [];
   
@@ -22,19 +25,96 @@ import { DestinationService } from '../../destinations/service/destinations.serv
       const flights = this.flightService.list();
   
       this.bookings = [
-        {
-          id: '1',
-          passengers: 5,
-          flight: flights[0],
-          destinationImageUrl: this.getDestinationImageUrl(flights[0].destination),
-        },
-        {
-          id: '2',
-          passengers: 6,
-          flight: flights[1],
-          destinationImageUrl: this.getDestinationImageUrl(flights[1].destination),
-        },
-        // Add more bookings here
+        new Booking(
+          '1',
+          [
+            new Passenger('P123456', 'John Doe'),
+            new Passenger('P654321', 'Jane Smith'),
+          ],
+          flights[0],
+          this.getDestinationImageUrl(flights[0].destination)
+        ),
+        new Booking(
+          '2',
+          [
+            new Passenger('P789123', 'Alice Brown'),
+            new Passenger('P111222', 'Chris Green'),
+          ],
+          flights[1],
+          this.getDestinationImageUrl(flights[1].destination)
+        ),
+        new Booking(
+          '3',
+          [
+            new Passenger('P333444', 'Michael Blue'),
+            new Passenger('P555666', 'Sarah White'),
+          ],
+          flights[2],
+          this.getDestinationImageUrl(flights[2].destination)
+        ),
+        new Booking(
+          '4',
+          [
+            new Passenger('P777888', 'David Black'),
+            new Passenger('P999000', 'Emily Yellow'),
+          ],
+          flights[3],
+          this.getDestinationImageUrl(flights[3].destination)
+        ),
+        new Booking(
+          '5',
+          [
+            new Passenger('P121314', 'Oliver Violet'),
+            new Passenger('P151617', 'Sophia Red'),
+          ],
+          flights[4],
+          this.getDestinationImageUrl(flights[4].destination)
+        ),
+        new Booking(
+          '6',
+          [
+            new Passenger('P181920', 'William Orange'),
+            new Passenger('P212223', 'Emma Cyan'),
+          ],
+          flights[5],
+          this.getDestinationImageUrl(flights[5].destination)
+        ),
+        new Booking(
+          '7',
+          [
+            new Passenger('P242526', 'James Purple'),
+            new Passenger('P272829', 'Charlotte Magenta'),
+          ],
+          flights[6],
+          this.getDestinationImageUrl(flights[6].destination)
+        ),
+        new Booking(
+          '8',
+          [
+            new Passenger('P303132', 'Benjamin Lime'),
+            new Passenger('P333435', 'Ava Aqua'),
+          ],
+          flights[7],
+          this.getDestinationImageUrl(flights[7].destination)
+        ),
+        new Booking(
+          '9',
+          [
+            new Passenger('P363738', 'Lucas Silver'),
+            new Passenger('P394041', 'Mia Gold'),
+          ],
+          flights[8],
+          this.getDestinationImageUrl(flights[8].destination)
+        ),
+        new Booking(
+          '10',
+          [
+            new Passenger('P424344', 'Henry Teal'),
+            new Passenger('P454647', 'Isabella Indigo'),
+          ],
+          flights[9],
+          this.getDestinationImageUrl(flights[9].destination)
+        ),
       ];
     }
   
