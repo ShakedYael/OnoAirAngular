@@ -1,20 +1,62 @@
+/* Container Styling */
 .search-flight-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* Table Elevation and Styling */
 .mat-elevation-z8 {
   margin: 20px 0;
   border-radius: 4px;
+  overflow: hidden; /* Prevents overflow from border-radius */
 }
 
+/* Header Row Styling */
 .mat-header-row {
   background-color: #f5f5f5;
   font-weight: bold;
+  text-align: left;
 }
 
+/* Sorting Instruction */
+.sort-instruction {
+  font-size: 14px;
+  color: #6c757d; /* Muted text color */
+  margin-bottom: 10px;
+  text-align: center; /* Center the sorting message */
+  font-style: italic; /* Optional: Makes it more visually distinct */
+}
+
+/* Table Cell Styling */
+.mat-cell {
+  padding: 16px; /* Ensures consistent spacing for table cells */
+}
+
+.mat-header-cell {
+  padding: 16px; /* Matches cell padding for alignment */
+}
+
+/* Buttons in Table */
 button {
   font-size: 14px;
-  text-transform: none;
+  text-transform: none; /* Removes capitalization for Material buttons */
+  margin: 0; /* Ensures consistent alignment */
+}
+
+/* Responsive Table Styling */
+@media (max-width: 768px) {
+  .search-flight-container {
+    padding: 10px;
+  }
+
+  .mat-header-cell,
+  .mat-cell {
+    padding: 8px; /* Reduce padding for smaller screens */
+    font-size: 12px; /* Smaller font size for compact view */
+  }
+
+  .sort-instruction {
+    font-size: 12px;
+  }
 }

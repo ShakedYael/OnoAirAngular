@@ -21,4 +21,9 @@ export class DestinationService {
   list(): Destination[] {
     return this.destinations;
   }
+
+  get(code: string): Destination | undefined {
+    return this.destinations.find(dest => dest.code === code);
+    
+  }
 }

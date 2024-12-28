@@ -8,6 +8,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSort } from '@angular/material/sort';
+import { ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 
 
 @Component({
@@ -17,7 +20,7 @@ import { MatSortModule } from '@angular/material/sort';
   styleUrl: './search-a-flight.component.css'
 })
 export class SearchAFlightComponent  implements OnInit {
-  flights: Flight[] = [];
+  flights: MatTableDataSource<Flight> = new MatTableDataSource<Flight>();
   displayedColumns: string[] = [
     'flightNo',
     'origin',
@@ -27,6 +30,7 @@ export class SearchAFlightComponent  implements OnInit {
     'actions'
   ];
 
+  @ViewChild(MatSort) sort!: MatSort;
 
 
   constructor(
@@ -35,9 +39,16 @@ export class SearchAFlightComponent  implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.flights = this.flightService.list();
-  }
+    const flightData = this.flightService.list();
+    this.flights = new MatTableDataSource(flightData);
 
+    setTimeout(() => {
+      this.flights.sort = this.sort;
+    });
+
+  }
+  
+  
   bookFlight(flightNo: string): void {
     this.router.navigate(['/book-single-flight', { flightNo }]);
   }
