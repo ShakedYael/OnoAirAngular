@@ -1,0 +1,16 @@
+<div class="booking-card">
+    <img
+      [src]="booking.destinationImageUrl"
+      alt="{{ booking.flight.destination }}"
+      class="destination-image"
+    />
+    <div class="booking-details">
+      <p><strong>Origin:</strong> {{ booking.flight.origin }}</p>
+      <p><strong>Destination:</strong> {{ booking.flight.destination }}</p>
+      <p><strong>Boarding:</strong> {{ booking.flight.departureDate }} {{ booking.flight.departureTime }}</p>
+      <p><strong>Landing:</strong> {{ booking.flight.arrivalDate }} {{ booking.flight.arrivalTime }}</p>
+      <p><strong>No. of Passengers:</strong> {{ booking.getPassengerCount() }}</p>
+    </div>
+    <button mat-raised-button color="primary" [routerLink]="['/view-booking', booking.id]">View</button>
+  </div>
+  

@@ -1,0 +1,46 @@
+.booking-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #dee2e6; /* Light border color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ffffff; /* White background */
+    margin: 15px 0; /* Spacing between cards */
+  }
+  
+  .booking-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Spacing between details */
+  }
+  
+  .destination-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-right: 20px; /* Space between the image and text */
+  }
+  
+  button {
+    align-items: center; /* Align the button to the top */
+    margin-top: 10px; /* Add some space above the button */
+  }
+  
+  @media (max-width: 600px) {
+    .booking-card {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: flex-start; /* Align items to the start */
+    }
+  
+    .destination-image {
+      margin-right: 0; /* Remove right margin for stacked layout */
+      margin-bottom: 10px; /* Add bottom margin for spacing */
+    }
+  
+    button {
+      align-self: center; /* Center the button on smaller screens */
+    }
+  }
+  
