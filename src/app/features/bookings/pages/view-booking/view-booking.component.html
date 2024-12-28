@@ -1,28 +1,32 @@
 <div class="view-booking-container" *ngIf="booking">
-    <h1>Book a flight</h1>
-    <div class="flight-details">
-      <p>
-        <strong>Origin:</strong> {{ booking.flight.origin }} <br />
-        <strong>Boarding:</strong> {{ booking.flight.departureDate }} {{ booking.flight.departureTime }}
-      </p>
-      <p>
-        <strong>Destination:</strong> {{ booking.flight.destination }} <br />
-        <strong>Landing:</strong> {{ booking.flight.arrivalDate }} {{ booking.flight.arrivalTime }}
-      </p>
-    </div>
-  
-    <p><strong>No. of passengers:</strong> {{ booking.passengers }}</p>
-  
-    <div *ngFor="let passenger of [].constructor(booking.passengers); let i = index">
-      <h3>Passenger {{ i + 1 }}</h3>
-      <p>
-        <strong>Name:</strong> testi test <br />
-        <strong>Passport no.:</strong> 123456789
-      </p>
-    </div>
+  <h1>View Booking</h1>
+
+  <!-- Flight Details -->
+  <div class="flight-details">
+    <p>
+      <strong>Origin:</strong> {{ booking.flight.origin }} <br />
+      <strong>Boarding:</strong> {{ booking.flight.departureDate }} {{ booking.flight.departureTime }}
+    </p>
+    <p>
+      <strong>Destination:</strong> {{ booking.flight.destination }} <br />
+      <strong>Landing:</strong> {{ booking.flight.arrivalDate }} {{ booking.flight.arrivalTime }}
+    </p>
   </div>
-  
-  <div *ngIf="!booking" class="error-message">
-    <p>Booking not found.</p>
+
+  <!-- Total Number of Passengers -->
+  <p><strong>No. of Passengers:</strong> {{ booking.getPassengerCount() }}</p>
+
+  <!-- Passenger Details -->
+  <div *ngFor="let passenger of booking.passengers; let i = index">
+    <h3>Passenger {{ i + 1 }}</h3>
+    <p>
+      <strong>Name:</strong> {{ passenger.fullName }} <br />
+      <strong>Passport No.:</strong> {{ passenger.passportNumber }}
+    </p>
   </div>
-  
+</div>
+
+<!-- Error Message -->
+<div *ngIf="!booking" class="error-message">
+  <p>Booking not found.</p>
+</div>
