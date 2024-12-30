@@ -39,13 +39,24 @@ export class SearchAFlightComponent  implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const flightData = this.flightService.list();
-    this.flights = new MatTableDataSource(flightData);
-
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Set today's time to 00:00:00 for comparison
+  
+    const futureFlights = this.flightService.list().filter((flight) => {
+      const departureDate = new Date(flight.departureDate);
+      departureDate.setHours(0, 0, 0, 0); // Ignore the time part in the comparison
+  
+      console.log(`Checking flight ${flight.flightNo}, Departure Date: ${departureDate}`);
+      return departureDate >= today; // Include flights departing today or later
+    });
+  
+    console.log('Future Flights:', futureFlights);
+  
+    this.flights = new MatTableDataSource(futureFlights);
+  
     setTimeout(() => {
       this.flights.sort = this.sort;
     });
-
   }
   
   
