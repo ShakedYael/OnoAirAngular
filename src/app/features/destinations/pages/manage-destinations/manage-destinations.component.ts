@@ -4,11 +4,12 @@ import { Destination } from '../../model/destination.model';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router'; // Import RouterModule
+import { MatButtonModule } from '@angular/material/button';
 
 
 @Component({
   selector: 'app-manage-destinations',
-  imports: [MatTableModule, MatIconModule, RouterModule],
+  imports: [MatTableModule, MatIconModule, RouterModule,MatButtonModule],
   templateUrl: './manage-destinations.component.html',
   styleUrl: './manage-destinations.component.css'
 })
