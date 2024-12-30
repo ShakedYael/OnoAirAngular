@@ -22,9 +22,9 @@ body, html {
   overflow-y: auto; /* Enable vertical scrolling */
   padding-bottom: 60px; /* Add padding to ensure content doesn't overlap footer */
 }
-
+/*
 footer {
-  position: fixed; /* Keep footer fixed at the bottom */
+  position: fixed; /* Keep footer fixed at the bottom 
   bottom: 0;
   width: 100%;
   height: 50px;
@@ -34,7 +34,7 @@ footer {
   justify-content: flex-end;
   align-items: center;
   z-index: 1000;
-}
+}*/
 
 table {
   width: 100%; /* Make the table responsive within the container */
@@ -56,4 +56,5 @@ h1 {
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center; /* Center-align the title */
+  color:#2c3e50;
 }

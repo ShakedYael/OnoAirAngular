@@ -1,22 +1,20 @@
-
 .hamburger {
   position: absolute;
-  top: 8px; /* Adjust to match your toolbar padding */
-  left: 8px; /* Adjust to match your toolbar padding */
-  color: #1e3a8a;           /* Dark blue icon color */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Shadow effect */
+  top: 8px; /* Match footer alignment */
+  left: 16px; /* Consistent padding as footer */
+  color: #1e3a8a; /* Same color as the help icon */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Shadow effect matches footer */
   border-radius: 7px;
-  border:none;
-  margin: 10px;
-  
+  border: none;
+  cursor: pointer;
 }
 
 .hamburger:hover {
-  background-color: #cbd5e1; /* Slightly darker blue on hover */
+  background-color: #cbd5e1;
 }
 
 .app-title {
-  margin-left: 60px; /* Add spacing to avoid overlapping the hamburger button */
+  margin-left: 60px; /* Align title with hamburger spacing */
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
@@ -27,9 +25,11 @@
 }
 
 mat-toolbar {
-  position: relative;
+  display: flex;
+  justify-content: space-between; /* Match the footer alignment */
+  align-items: center; /* Align items vertically */
   background-color: #e0e7ff;
-  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Shadow effect matches footer */
+  height: 50px; /* Consistent height with footer */
+  padding: 0 16px; /* Same padding as footer */
 }
-
-

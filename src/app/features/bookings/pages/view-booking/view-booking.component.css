@@ -1,6 +1,8 @@
 .view-booking-container {
   max-width: 900px; /* Aligned with my-bookings-container */
   margin: 0 auto;
+  margin-top:30px;
+  margin-bottom:30px;
   padding: 40px; /* Aligned padding */
   font-family: Arial, sans-serif;
   background-color: #ffffff; /* Same background as booking cards */
@@ -13,7 +15,7 @@ h1 {
   text-align: center;
   font-size: 24px; /* Aligned with my-bookings h1 */
   margin-bottom: 10px;
-  color: #1e3a8a; /* Primary color for section titles */
+  color:#2c3e50;
 }
 
 h2 {
@@ -33,7 +35,7 @@ h2 {
 h3 {
   font-size: 18px;
   margin-top: 20px;
-  color: #1e3a8a;
+  color:#2c3e50;
 }
 
 p {
