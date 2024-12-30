@@ -24,18 +24,18 @@ export class MyBookingsComponent implements OnInit {
     const bookings = this.bookingsService.list();
 
     this.futureBookings = bookings.filter((booking) =>
-      this.isFutureBooking(booking.flight.departureDate, now)
+      this.isFutureBooking(booking.flight.departureDate, booking.flight.departureTime, now)
     );
 
     this.pastBookings = bookings.filter(
-      (booking) => !this.isFutureBooking(booking.flight.departureDate, now)
+      (booking) => !this.isFutureBooking(booking.flight.departureDate,booking.flight.departureTime, now)
     );
 
 
   }
 
-  private isFutureBooking(departureDate: string, now: Date): boolean {
-    const departure = new Date(departureDate);
+  private isFutureBooking(departureDate: string,departureTime: string, now: Date): boolean {
+    const departure = new Date(`${departureDate}T${departureTime}`);
     return departure >= now;
   }
 }

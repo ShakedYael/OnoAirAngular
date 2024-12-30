@@ -29,7 +29,7 @@ import { Passenger } from '../model/passenger.model';
           '1',
           [
             new Passenger('P123456', 'John Doe'),
-            new Passenger('P654321', 'Jane Smith'),
+           
           ],
           flights[0],
           this.getDestinationImageUrl(flights[0].destination)
@@ -39,6 +39,7 @@ import { Passenger } from '../model/passenger.model';
           [
             new Passenger('P789123', 'Alice Brown'),
             new Passenger('P111222', 'Chris Green'),
+            new Passenger('P654321', 'Jane Smith'),
           ],
           flights[1],
           this.getDestinationImageUrl(flights[1].destination)
@@ -48,6 +49,8 @@ import { Passenger } from '../model/passenger.model';
           [
             new Passenger('P333444', 'Michael Blue'),
             new Passenger('P555666', 'Sarah White'),
+            new Passenger('P333554', 'Shosh Blue'),
+            new Passenger('P333474', 'Alice Blue'),
           ],
           flights[2],
           this.getDestinationImageUrl(flights[2].destination)
@@ -74,7 +77,7 @@ import { Passenger } from '../model/passenger.model';
           '6',
           [
             new Passenger('P181920', 'William Orange'),
-            new Passenger('P212223', 'Emma Cyan'),
+            
           ],
           flights[5],
           this.getDestinationImageUrl(flights[5].destination)
@@ -84,6 +87,7 @@ import { Passenger } from '../model/passenger.model';
           [
             new Passenger('P242526', 'James Purple'),
             new Passenger('P272829', 'Charlotte Magenta'),
+            new Passenger('P212223', 'Emma Cyan'),
           ],
           flights[6],
           this.getDestinationImageUrl(flights[6].destination)
