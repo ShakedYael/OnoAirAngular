@@ -39,10 +39,14 @@ export class SearchAFlightComponent  implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0); // Set today's time to 00:00:00 for comparison
+    // const today = new Date();
+    // today.setHours(0, 0, 0, 0); // Set today's time to 00:00:00 for comparison
   
-    const futureFlights = this.flightService.list().filter((flight) => {
+    const flightData = this.flightService.list();
+    this.flights = new MatTableDataSource(flightData);
+
+
+    /*const futureFlights = this.flightService.list().filter((flight) => {
       const departureDate = new Date(flight.departureDate);
       departureDate.setHours(0, 0, 0, 0); // Ignore the time part in the comparison
   
@@ -52,7 +56,7 @@ export class SearchAFlightComponent  implements OnInit {
   
     console.log('Future Flights:', futureFlights);
   
-    this.flights = new MatTableDataSource(futureFlights);
+    this.flights = new MatTableDataSource(futureFlights)*/
   
     setTimeout(() => {
       this.flights.sort = this.sort;

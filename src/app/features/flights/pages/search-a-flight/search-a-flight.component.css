@@ -2,7 +2,8 @@
 .search-flight-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  margin-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 /* Table Elevation and Styling */
@@ -48,6 +49,7 @@ button {
 @media (max-width: 768px) {
   .search-flight-container {
     padding: 10px;
+    margin-bottom:200px;
   }
 
   .mat-header-cell,
