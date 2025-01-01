@@ -1,21 +1,21 @@
 footer {
   display: flex;
-  justify-content: flex-end; /* Align content to match header spacing */
+  justify-content: flex-end; 
   align-items: center;
   height: 50px;
-  background-color: #e0e7ff; /* Same background as the header */
+  background-color: #e0e7ff; 
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.4);
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 0 16px; /* Consistent padding with the header */
+  padding: 0 16px; 
   z-index: 1000;
 }
 
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Align to the start to mimic the hamburger alignment */
+  justify-content: flex-end; 
   margin: 0;
 }
 
@@ -24,7 +24,7 @@ footer {
   color: #1e3a8a;
   border: none;
   border-radius: 7px;
-  margin-right: 30px; /* Consistent margin with header's spacing */
+  margin-right: 30px; 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }

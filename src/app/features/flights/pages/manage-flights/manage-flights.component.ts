@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FlightService } from '../../service/flights.service';
 import { Flight } from '../../model/flight.model';
-import { RouterModule } from '@angular/router'; // Import RouterModule
+import { RouterModule } from '@angular/router'; 
 
 
 @Component({
@@ -14,12 +14,12 @@ import { RouterModule } from '@angular/router'; // Import RouterModule
   styleUrl: './manage-flights.component.css'
 })
 export class ManageFlightsComponent implements OnInit {
-  flights: Flight[] = []; // Initialize as an empty array
+  flights: Flight[] = []; 
 
   constructor(private flightService: FlightService) {}
 
   ngOnInit(): void {
-    this.flights = this.flightService.list(); // Retrieve flights from the service
+    this.flights = this.flightService.list(); 
   }
   
 }

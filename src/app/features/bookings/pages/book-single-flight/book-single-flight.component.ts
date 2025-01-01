@@ -27,10 +27,7 @@ export class BookSingleFlightComponent implements OnInit {
     }
 
 
-    /*
-    if (!this.flight) {
-      throw new Error(`Flight with flightNo ${flightNo} not found`);
-    }*/
+  
     
   }
 

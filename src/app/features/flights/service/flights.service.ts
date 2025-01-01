@@ -128,12 +128,10 @@ export class FlightService {
 
 
 
-  // Return all flights
   list(): Flight[] {
     return this.flights;
   }
 
-  // Get a specific flight by its flight number
   get(flightNo: string): Flight | undefined {
     return this.flights.find(f => f.flightNo === flightNo);
   }

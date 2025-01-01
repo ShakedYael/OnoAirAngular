@@ -41,13 +41,13 @@ export class FlightCardComponent implements OnInit {
     this.filteredFlights = this.flights
       .filter((flight) => {
         const departureDate = new Date(flight.departureDate);
-        return departureDate >= todayWithoutTime && departureDate <= oneWeekFromNow; // Compare only dates
+        return departureDate >= todayWithoutTime && departureDate <= oneWeekFromNow; 
       })
       .map((flight) => {
         const destination = this.destinations.find(dest => dest.name === flight.destination);
         return {
           ...flight,
-          destinationImage: destination ? destination.imageUrl : 'https://via.placeholder.com/150', // Default image if no match
+          destinationImage: destination ? destination.imageUrl : 'https://via.placeholder.com/150', 
         };
       });
   }

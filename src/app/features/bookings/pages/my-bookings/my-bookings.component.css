@@ -15,13 +15,13 @@
   h2 {
     font-size: 20px;
     margin: 10px 0;
-    color: #1e3a8a; /* Primary color for section titles */
+    color: #1e3a8a; 
   }
   
   .bookings-section {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Spacing between booking cards */
+    gap: 20px; 
   }
   
   .booking-card {
@@ -44,7 +44,7 @@
   
   .no-bookings-message {
     text-align: center;
-    color: #6c757d; /* Muted color for no-bookings message */
+    color: #6c757d; 
     font-style: italic;
   }
   

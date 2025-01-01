@@ -3,7 +3,7 @@ import { DestinationService } from '../../service/destinations.service';
 import { Destination } from '../../model/destination.model';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterModule } from '@angular/router'; // Import RouterModule
+import { RouterModule } from '@angular/router'; 
 import { MatButtonModule } from '@angular/material/button';
 
 
@@ -14,11 +14,10 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './manage-destinations.component.css'
 })
 export class ManageDestinationsComponent implements OnInit {
-  destinations: Destination[] = []; // Store list of destinations
-
+  destinations: Destination[] = [];
   constructor(private destinationService: DestinationService) {}
 
   ngOnInit(): void {
-    this.destinations = this.destinationService.list(); // Fetch destinations
+    this.destinations = this.destinationService.list(); 
   }
 }

@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './single-destination.component.css'
 })
 export class SingleDestinationComponent implements OnInit {
-  destination?: Destination; // Store the selected destination
-  destinationNotFound: boolean = false; // Track if the destination is not found
+  destination?: Destination; 
+  destinationNotFound: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,19 +20,18 @@ export class SingleDestinationComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Get the destination code from the route parameters
     const code = this.route.snapshot.paramMap.get('code');
     if (code) {
-      // Fetch the destination details using the service
+      
       const destination = this.destinationService.list().find(dest => dest.code === code);
 
       if (destination) {
-        this.destination = destination; // Assign the destination if found
+        this.destination = destination; 
       } else {
-        this.destinationNotFound = true; // Set the flag if not found
+        this.destinationNotFound = true;
       }
     } else {
-      this.destinationNotFound = true; // Set the flag if no code in URL
+      this.destinationNotFound = true;
     }
   }
 }

@@ -11,20 +11,17 @@ import { MatMenuModule } from '@angular/material/menu';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  constructor(private router: Router) {} // Inject Router for navigation
+  constructor(private router: Router) {}
 
 
-   // Navigate to specific route
    navigateTo(path: string): void {
     this.router.navigate([`/${path}`]);
   }
 
-  // Navigate to the home page
   goToHome(): void {
     this.router.navigate(['/home-page']);
   }
 
-  // Placeholder for toggling admin menu
   toggleAdminMenu(): void {
     console.log('Admin menu toggled');
   }
