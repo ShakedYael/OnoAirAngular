@@ -1,20 +1,20 @@
-<div class="booking-container" *ngIf="flight; else noFlight">
-    <h1>Book a flight</h1>
-    <div class="flight-details">
-      <p>
-        <strong>Origin:</strong> {{ flight.origin }} 
-        <strong>Boarding:</strong> {{ flight.departureDate }} {{ flight.departureTime }}
-      </p>
-      <p>
-        <strong>Destination:</strong> {{ flight.destination }} 
-        <strong>Landing:</strong> {{ flight.arrivalDate }} {{ flight.arrivalTime }}
-      </p>
-    </div>
+<div class="booking-container" *ngIf="flight; else noFlightTemplate">
+  <h1>Book a Flight</h1>
+  <div class="flight-details">
+    <p>
+      <strong>Origin:</strong> {{ flight.origin }} <br />
+      <strong>Boarding:</strong> {{ flight.departureDate }} {{ flight.departureTime }}
+    </p>
+    <p>
+      <strong>Destination:</strong> {{ flight.destination }} <br />
+      <strong>Landing:</strong> {{ flight.arrivalDate }} {{ flight.arrivalTime }}
+    </p>
   </div>
-  
-  <ng-template #noFlight>
-    <p class="no-flight-message">Flight not found.</p>
-  </ng-template>
-  
+</div>
 
-  
+<ng-template #noFlightTemplate>
+  <div class="no-flight-found">
+    <h1>Flight Not Found</h1>
+    <p>We couldn't find the flight you were looking for.</p>
+  </div>
+</ng-template>
